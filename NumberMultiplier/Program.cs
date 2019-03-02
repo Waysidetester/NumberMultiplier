@@ -33,7 +33,7 @@ namespace NumberMultiplier
             Console.WriteLine("You can");
             Console.WriteLine("(1.)   Multiply all the numbers together");
             Console.WriteLine("(2.)   Square each number individually");
-            Console.WriteLine("Please enter the number you choose");
+            Console.WriteLine("Please enter the number you choose\n");
             string userChoice = Console.ReadLine();
 
             switch (userChoice) {
@@ -49,7 +49,7 @@ namespace NumberMultiplier
                     }
 
                     // display the numbers multiplied together
-                    Console.WriteLine(finalMultiplicationOutput);
+                    Console.WriteLine($"\n{MyNumberList} multiplied together = {finalMultiplicationOutput}");
                     break;
 
                 // ---------------- to the power of ---------------
@@ -69,7 +69,7 @@ namespace NumberMultiplier
                         }
                     }
 
-                    Console.WriteLine(finalPowerOutput);
+                    Console.WriteLine($"\n{MyNumberList} to the power of 2 = {finalPowerOutput}");
                     break;
 
                 default:
@@ -77,8 +77,9 @@ namespace NumberMultiplier
                 }
 
             // -------------- Exit application ----------------
-            Console.WriteLine("Press ENTER to exit");
-            Console.ReadLine();
+
+            Console.WriteLine("\nPress any key to exit");
+            Console.ReadKey();
         }
     }
 }
